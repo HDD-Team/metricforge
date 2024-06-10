@@ -12,17 +12,17 @@ setup(
   description='Library for generating validation dataset and evaluation metrics',
   long_description=readme(),
   long_description_content_type='text/markdown',
-  url='home_link',
+  url='https://github.com/HDD-Team/metricforge',
   packages=find_packages(),
   install_requires=['requests>=2.25.1'],
   classifiers=[
-    'Programming Language :: Python :: 3.11',
-    'License :: OSI Approved :: MIT License',
+    'Programming Language :: Python :: 3.10',
+    'License ::    Apache License 2.0:",
     'Operating System :: OS Independent'
   ],
-  keywords='example python',
+  keywords='metric,validation,generate',
   project_urls={
-    'Documentation': 'link'
+    'Documentation': 'https://github.com/HDD-Team/metricforge/blob/main/README.MD'
   },
   python_requires='>=3.7'
 )
