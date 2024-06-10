@@ -4,5 +4,4 @@ from langchain.prompts import ChatPromptTemplate
 from langchain_community.chat_models import ChatOllama
 import pandas as pd
 from sklearn.metrics import accuracy_score, f1_score
-from main import script_valid,calculate_metrics
 
