@@ -8,7 +8,7 @@ setup(
   name='metricforge',
   version='0.0.1',
   author='m2syndicate',
-  author_email='m2syndicate@gmail.com',
+  author_email='mtwosyndicate@gmail.com',
   description='Library for generating validation dataset and evaluation metrics',
   long_description=readme(),
   long_description_content_type='text/markdown',
