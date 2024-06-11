@@ -10,7 +10,7 @@ To do this, enter in function your function, which generating answer.
 Otherwise select model which you need and prompt, then new CSV file would be generated
 
 ###### variables
-**file_base** - your csv file with train data. `"your_csv.csv"`
+**file_base** - your csv file with train data. `"your_csv.csv"` \n
 **df_name** - name of your new dataframe
 **column_name** - name of column which will be used for valid generation
 **file_new** - name of new csv file `"new_csv.csv"`
