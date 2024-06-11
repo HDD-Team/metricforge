@@ -3,6 +3,71 @@
 
 ### List of functions:
 
-**script_valid** - A function for creating validation dataset or creating a new column, using your own model. To do this, enter in function your function, which generating answer. Otherwise select model what you need and prompt and then new CSV file would be generated
+#### script_valid
 
-**calculate_metrics** - A function for calculating Accuracy and F1 Score metrics. We use the Schlern library for calculations. Column one and Column two can be both the name of the column and its number
+Function for creating validation dataset or creating a new column, using your own model. 
+To do this, enter in function your function, which generating answer. 
+Otherwise select model which you need and prompt, then new CSV file would be generated
+
+###### variables
+**file_base** - your csv file with train data. `"your_csv.csv"`
+**df_name** - name of your new dataframe
+**column_name** - name of column which will be used for valid generation
+**file_new** - name of new csv file `"new_csv.csv"`
+**model_name** - name of model which you want to use
+**prompt** - prompt for LLM for generating valid dataset
+
+**Example usage of function:**
+
+`sv.script_valid(file_base = "dataset.csv", df_name = "generated_answer",column_name = "data/dictionary",prompt = "You are a validation generator dataset bot. "
+                                                                                     "You are creating a validation dataset based on a training dataset. "
+                                                                                     "Based on the given query, generate a similar query.",file_new = "file_new.csv",model_name="mistral:instruct")`
+
+##### calculate_metrics
+
+Function for calculating Accuracy and F1 Score metrics. We use the Schlern library for calculations. Column one and Column two can be both the name of the column and its number
+
+###### variables
+**csv_file** - your csv file with data. `"your_csv.csv"`
+**column_one** - number or name of first column, where it is your original data
+**column_two** - number or name of second column, where it is generated or predicted data
+
+**Example usage of function:**
+
+`csv_file = r"validated_dataset.csv"
+accuracy, f1 = mf.calculate_metrics(csv_file, 3, 4)
+print("Accuracy:", accuracy)
+print("F1 Score:", f1)`
+
+##### script_generate
+
+Function for applying RAG function "model_query" to the provdied dataset, to generate answers for "column_name" in your dataset. By default model_query generate answer in str format.
+
+###### variables
+
+**csv_file** - your csv file with provided data. `"your_csv.csv"`
+**column_name** - name of column which will be used for answer generation
+**dfnew_name** - name of new df
+**model_query** - your function with RAG chain, where result is worg of RAG chain
+
+**Example usage of function:**
+
+`mf.script_generate_json(csv_file=r"datavalid.csv", column_name="data/dictionary",
+                   model_query=model_query,dfnew_name="testing.csv")`
+
+##### script_generate_json
+
+Function for applying RAG function "model_query" to the provdied dataset, to generate answers for "column_name" in your dataset. This function assumes your LLM generate answer in JSON view, so you need to select which name from JSON you want extract in desired_data variable
+
+###### variables
+
+**csv_file** - your csv file with provided data. `"your_csv.csv"`
+**column_name** - name of column which will be used for answer generation
+**dfnew_name** - name of new df
+**model_query** - your function with RAG chain, where result is worg of RAG chain
+**desired_data** - name of json data, which will be taken from json and inputted in result CSV column
+
+**Example usage of function:**
+
+`mf.script_generate_json(csv_file=r"datavalid.csv", column_name="data/dictionary",
+                   model_query=model_query,dfnew_name="testing.csv", desired_data="data/url")`
