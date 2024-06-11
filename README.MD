@@ -61,11 +61,11 @@ Function for applying RAG function "model_query" to the provdied dataset, to gen
 
 ###### variables
 
-**csv_file** - your csv file with provided data. `"your_csv.csv"`
-**column_name** - name of column which will be used for answer generation
-**dfnew_name** - name of new df
-**model_query** - your function with RAG chain, where result is worg of RAG chain
-**desired_data** - name of json data, which will be taken from json and inputted in result CSV column
+**csv_file** - your csv file with provided data. `"your_csv.csv"` <br />
+**column_name** - name of column which will be used for answer generation <br />
+**dfnew_name** - name of new df <br />
+**model_query** - your function with RAG chain, where result is worg of RAG chain <br />
+**desired_data** - name of json data, which will be taken from json and inputted in result CSV column <br />
 
 **Example usage of function:**
 
