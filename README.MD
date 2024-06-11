@@ -28,9 +28,9 @@ Otherwise select model which you need and prompt, then new CSV file would be gen
 Function for calculating Accuracy and F1 Score metrics. We use the Schlern library for calculations. Column one and Column two can be both the name of the column and its number
 
 ###### variables
-**csv_file** - your csv file with data. `"your_csv.csv"`
-**column_one** - number or name of first column, where it is your original data
-**column_two** - number or name of second column, where it is generated or predicted data
+**csv_file** - your csv file with data. `"your_csv.csv"` <br /> 
+**column_one** - number or name of first column, where it is your original data <br /> 
+**column_two** - number or name of second column, where it is generated or predicted data <br />
 
 **Example usage of function:**
 
@@ -45,10 +45,10 @@ Function for applying RAG function "model_query" to the provdied dataset, to gen
 
 ###### variables
 
-**csv_file** - your csv file with provided data. `"your_csv.csv"`
-**column_name** - name of column which will be used for answer generation
-**dfnew_name** - name of new df
-**model_query** - your function with RAG chain, where result is worg of RAG chain
+**csv_file** - your csv file with provided data. `"your_csv.csv"` <br />
+**column_name** - name of column which will be used for answer generation <br />
+**dfnew_name** - name of new df <br />
+**model_query** - your function with RAG chain, where result is worg of RAG chain <br />
 
 **Example usage of function:**
 
