@@ -11,11 +11,11 @@ Otherwise select model which you need and prompt, then new CSV file would be gen
 
 ###### variables
 **file_base** - your csv file with train data. `"your_csv.csv"` <br />
-**df_name** - name of your new dataframe 
-**column_name** - name of column which will be used for valid generation
-**file_new** - name of new csv file `"new_csv.csv"`
-**model_name** - name of model which you want to use
-**prompt** - prompt for LLM for generating valid dataset
+**df_name** - name of your new dataframe <br />
+**column_name** - name of column which will be used for valid generation <br />
+**file_new** - name of new csv file `"new_csv.csv"` <br />
+**model_name** - name of model which you want to use <br />
+**prompt** - prompt for LLM for generating valid dataset <br />
 
 **Example usage of function:**
 
