@@ -1,9 +1,12 @@
 # **MetricForge**
 ## Library for generating validation dataset and evaluation metrics
 
+### Use  `import metricforge.main as mf`  
+### To use this library you need to install ollama and pull model, that you work with
 ### List of functions:
 
-#### script_valid
+##### script_valid
+
 
 Function for creating validation dataset or creating a new column, using your own model. 
 To do this, enter in function your function, which generating answer. 
@@ -19,7 +22,7 @@ Otherwise select model which you need and prompt, then new CSV file would be gen
 
 **Example usage of function:**
 
-`sv.script_valid(file_base = "dataset.csv", df_name = "generated_answer",column_name = "data/dictionary",prompt = "You are a validation generator dataset bot. "
+`mf.script_valid(file_base = "dataset.csv", df_name = "generated_answer",column_name = "data/dictionary",prompt = "You are a validation generator dataset bot. "
                                                                                      "You are creating a validation dataset based on a training dataset. "
                                                                                      "Based on the given query, generate a similar query.",file_new = "file_new.csv",model_name="mistral:instruct")`
 
